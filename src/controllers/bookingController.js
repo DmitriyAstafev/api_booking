@@ -42,7 +42,7 @@ class BookingController {
       res.json(booking);
     } catch (error) {
       await t.rollback();
-      res.json({ message: error.message });
+      res.status(error.status).json({ message: error.message });
     }
   }
 
@@ -56,7 +56,7 @@ class BookingController {
       );
       res.json({ message: 'Бронирование отменено' });
     } catch (error) {
-      res.json({ message: error.message });
+      res.status(error.status).json({ message: error.message });
     }
   }
 }

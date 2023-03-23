@@ -29,9 +29,9 @@ class RoomController {
             [Op.gt]: checkIn,
           },
         },
-        attributes: ['room_id'],
+        attributes: ['roomId'],
       });
-      const reservedRoomsId = reservedRooms.map((booking) => booking.room_id);
+      const reservedRoomsId = reservedRooms.map((booking) => booking.roomId);
       const freeRooms = await Room.findAll({
         where: {
           hotelId,
