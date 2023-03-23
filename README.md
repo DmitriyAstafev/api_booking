@@ -99,6 +99,8 @@ curl  -H 'Content-Type: application/json' --data '{"clientId":2,"roomId":2,"chec
 
 4. DELETE /api/v1/booking/:id Отмена бронирования
 
+В адресе передаем id бронирования. 
+
 Для тестирования можно реализовать запрос в командной строке
 
 curl -X DELETE http://localhost:3100/api/v1/booking/1
